@@ -47,42 +47,38 @@ namespace Host
             else
             {
                 richTextBox1.Text += input + "\n ";
+                richTextBox1.SelectionStart = richTextBox1.Text.Length;
+                richTextBox1.ScrollToCaret();
             }
         }
         public void serverListen()
         {
-            while (true)
-            {
+            while (true)    //need to change
+            {       
                 try
                 {
-                    //serverListen();
-                    //---incoming client connected---
-                    TcpClient client = listener.AcceptTcpClient();
-
+                    TcpClient client = listener.AcceptTcpClient();  // wait for connection
                     //---get the incoming data through a network stream---
                     NetworkStream nwStream = client.GetStream();
                     byte[] buffer = new byte[client.ReceiveBufferSize];
 
                     //---read incoming stream---
                     int bytesRead = nwStream.Read(buffer, 0, client.ReceiveBufferSize);
-
                     //---convert the data received into a string---
                     string dataReceived = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-                    //    Console.WriteLine("Received : " + dataReceived);
-                    // richTextBox1.Text += dataReceived + "\n";
-                    addText(dataReceived);
+
+                    addText(dataReceived);  // add to text fielddd
 
                 }
                 catch (Exception ex)
                 {
-                    
+                    // need to put bug logger? how to use lol
                 }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //---data to send to the server---
             string textToSend = DateTime.Now.ToString();
 
             //---create a TCPClient object at the IP and port no.---
@@ -93,13 +89,7 @@ namespace Host
             //---send the text---
             Console.WriteLine("Sending : " + textToSend);
             nwStream.Write(bytesToSend, 0, bytesToSend.Length);
-
-            //---read back the text---
-          /*  byte[] bytesToRead = new byte[client.ReceiveBufferSize];
-            int bytesRead = nwStream.Read(bytesToRead, 0, client.ReceiveBufferSize);
-            Console.WriteLine("Received : " + Encoding.ASCII.GetString(bytesToRead, 0, bytesRead));
-            Console.ReadLine();
-            */client.Close();
+            client.Close();
         }
 
        

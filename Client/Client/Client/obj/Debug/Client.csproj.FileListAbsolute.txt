@@ -1,0 +1,9 @@
+C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\bin\Debug\Client.exe.config
+C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\bin\Debug\Client.exe
+C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\bin\Debug\Client.pdb
+C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.exe
+C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.pdb
+C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.Send_Mail.resources
+C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.index.resources
