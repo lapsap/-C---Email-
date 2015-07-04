@@ -1,0 +1,9 @@
+C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\bin\Debug\Host.exe.config
+C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\bin\Debug\Host.exe
+C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\bin\Debug\Host.pdb
+C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\obj\Debug\Host.index.resources
+C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\obj\Debug\Host.Properties.Resources.resources
+C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\obj\Debug\Host.csproj.GenerateResource.Cache
+C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\obj\Debug\Host.exe
+C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\obj\Debug\Host.pdb
+C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\obj\Debug\Host.csprojResolveAssemblyReference.cache

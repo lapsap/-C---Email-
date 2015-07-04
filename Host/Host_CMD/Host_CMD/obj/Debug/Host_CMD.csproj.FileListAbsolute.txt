@@ -1,0 +1,5 @@
+C:\Users\xChris\Documents\GitHub\Email\Host\Host_CMD\Host_CMD\bin\Debug\Host_CMD.exe.config
+C:\Users\xChris\Documents\GitHub\Email\Host\Host_CMD\Host_CMD\bin\Debug\Host_CMD.exe
+C:\Users\xChris\Documents\GitHub\Email\Host\Host_CMD\Host_CMD\bin\Debug\Host_CMD.pdb
+C:\Users\xChris\Documents\GitHub\Email\Host\Host_CMD\Host_CMD\obj\Debug\Host_CMD.exe
+C:\Users\xChris\Documents\GitHub\Email\Host\Host_CMD\Host_CMD\obj\Debug\Host_CMD.pdb
