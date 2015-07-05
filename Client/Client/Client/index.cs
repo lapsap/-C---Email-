@@ -33,10 +33,12 @@ namespace Client
 
         }
 
-        private void btn_login_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            login form_login = new login();
-            form_login.Show();
+            login formLogin = new login();
+            formLogin.Show();
         }
+
+      
     }
 }

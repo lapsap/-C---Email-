@@ -8,22 +8,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace Client
 {
     public partial class login : Form
     {
-       
-
         public login()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_login_Click(object sender, EventArgs e)
         {
-            Client.connectDB.post();
-               
+            string toSend = "1!@#$%" + tb_user.Text+"!@#$%"+tb_pass.Text;
+            try
+            {
+              /* Client.HttpSend.httpSend(toSend);
+                string temp = Client.HttpSend.httpRead();
+                MessageBox.Show(temp);
+              */
+                  MessageBox.Show(Client.HttpSend.sendAndRead(toSend));
+            }
+            catch
+            {
+                MessageBox.Show("Server offline");
+            }
         }
     }
 }

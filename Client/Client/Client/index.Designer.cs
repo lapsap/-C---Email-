@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btn_sendMail = new System.Windows.Forms.Button();
-            this.btn_login = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_sendMail
@@ -42,22 +42,22 @@
             this.btn_sendMail.UseVisualStyleBackColor = true;
             this.btn_sendMail.Click += new System.EventHandler(this.btn_sendMail_Click);
             // 
-            // btn_login
+            // button1
             // 
-            this.btn_login.Location = new System.Drawing.Point(165, 163);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(100, 64);
-            this.btn_login.TabIndex = 1;
-            this.btn_login.Text = "Login";
-            this.btn_login.UseVisualStyleBackColor = true;
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            this.button1.Location = new System.Drawing.Point(280, 197);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(69, 74);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "login";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(431, 391);
-            this.Controls.Add(this.btn_login);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_sendMail);
             this.Name = "index";
             this.Text = "Form1";
@@ -69,7 +69,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn_sendMail;
-        private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.Button button1;
 
 
     }

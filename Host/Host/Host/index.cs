@@ -26,7 +26,9 @@ namespace Host
         private static string wampserver = "localhost";
         //
         const int PORT_NO = 5000;   //Port number to conenct
-        const string SERVER_IP = "127.0.0.1";   //host ip
+        const string SERVER_IP = "127.0.0.1";   //host ip;;;;
+        TcpClient client;
+        NetworkStream nwStream;
         //
         IPAddress localAdd = IPAddress.Parse(SERVER_IP);
         TcpListener listener;
@@ -73,6 +75,7 @@ namespace Host
         {
             try
             {
+                //check if user exits
                 ConnectDatabase();
                 string mySelectQuery = "SELECT pass,username FROM user WHERE username = '"+user+"'";
                 MySqlCommand filmsCommand = new MySqlCommand(mySelectQuery, conn);
@@ -91,9 +94,11 @@ namespace Host
                 }
                 catch  // if user dont exits, for creating new user
                 {
+                    Debug.WriteLine("host/index/sqlgetuser error"); 
                     //MessageBox.Show("hehe");
                 }
                 filmsCommand.Connection.Close();//close db connection
+
                 //logic
                 if (function == "make") // make new user
                 {
@@ -109,6 +114,15 @@ namespace Host
                         {
                             return "fail to create user";
                         }
+                    }
+                }
+                else if (function == "login")
+                {
+                    if (!userExits) return "nouser";
+                    else
+                    {
+                        if (pass == password) return "pass";
+                        else return "fail";
                     }
                 }
               
@@ -148,29 +162,54 @@ namespace Host
             }
         }
         //
+        private void processData(string input)
+        {
+            string[] split = new string[] { "!@#$%" };
+            string[] temp = input.Split(split, StringSplitOptions.None);
+            int to = Int16.Parse(temp[0]);
+
+            switch (to)
+            {
+                case 1 :
+                    checkPass(temp[1],temp[2]);
+                    break;
+            }
+
+
+        }
+        //
+        private void serverSend(string input)
+        {
+            byte[] bytesToSend = ASCIIEncoding.ASCII.GetBytes(input);
+            nwStream.Write(bytesToSend, 0, bytesToSend.Length);
+        }
+        //
         public void serverListen()  // get data 
         {
             while (true)    //need to change
             {       
                 try
                 {
-                    TcpClient client = listener.AcceptTcpClient();  // wait for connection
+                    client = listener.AcceptTcpClient();  // wait for connection
                     //---get the incoming data through a network stream---
-                    NetworkStream nwStream = client.GetStream();
+                    nwStream = client.GetStream();
                     byte[] buffer = new byte[client.ReceiveBufferSize];
 
                     //---read incoming stream---
                     int bytesRead = nwStream.Read(buffer, 0, client.ReceiveBufferSize);
                     //---convert the data received into a string---
                     string dataReceived = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+              
 
+                    processData(dataReceived); // see what to do with the data(addUser,newMail,readMail...)
                     addText(dataReceived);  // add to text fielddd
 
+                    client.Close();
                 }
                 catch (Exception ex)
                 {
                     //MessageBox.Show("serverListen() error");
-                    Debug.WriteLine("Host, serverListen() error"); 
+                    Debug.WriteLine("Host, serverListen() error " + ex); 
                 }
             }
         }
@@ -200,9 +239,10 @@ namespace Host
         }
         
         //
-        private bool checkPass(string user, string pass)
+        private void checkPass(string user, string pass)
         {
-            return false;
+            string result = sqlgetuser(user, pass, "-1", "login");
+            serverSend(result);
         }
         //
         private void sendMail(string dateTime, string from, string to, string ip, string subject, string msg)

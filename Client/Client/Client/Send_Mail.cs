@@ -32,23 +32,16 @@ namespace Client
                 string msg = "<<msg>>" + tb_msg.Text;
 
                 string toSend = ip + to + subject + msg;
-
-                //---create a TCPClient object at the IP and port no.---
-                TcpClient client = new TcpClient(SERVER_IP, PORT_NO);
-                NetworkStream nwStream = client.GetStream();
-                byte[] bytesToSend = ASCIIEncoding.ASCII.GetBytes(toSend);
-
-
-                //---send the text---
-                nwStream.Write(bytesToSend, 0, bytesToSend.Length);
-
-                //---read back the text---
-                //     byte[] bytesToRead = new byte[client.ReceiveBufferSize];
-                //       int bytesRead = nwStream.Read(bytesToRead, 0, client.ReceiveBufferSize);
-                //         Console.WriteLine("Received : " + Encoding.ASCII.GetString(bytesToRead, 0, bytesRead));
-                //         Console.ReadLine();
-                client.Close();
-                MessageBox.Show("Mail Sent !");
+                try
+                {
+                    Client.HttpSend.httpSend(toSend);
+                    MessageBox.Show("Mail Sent !");
+                    
+                }
+                catch
+                {
+                    MessageBox.Show("ERROR! mail not sent");
+                }
                 this.Close();
             }
             catch (Exception ex)
