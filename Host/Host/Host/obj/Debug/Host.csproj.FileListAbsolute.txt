@@ -7,3 +7,5 @@ C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\obj\Debug\Host.csproj.Gene
 C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\obj\Debug\Host.exe
 C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\obj\Debug\Host.pdb
 C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\obj\Debug\Host.csprojResolveAssemblyReference.cache
+C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\bin\Debug\MySql.Data.DLL
+C:\Users\xChris\Documents\GitHub\Email\Host\Host\Host\obj\Debug\Host.addUser.resources

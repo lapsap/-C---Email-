@@ -14,7 +14,7 @@ namespace Client
 {
     public partial class index : Form
     {
-      
+        
 
         public index()
         {
@@ -26,6 +26,17 @@ namespace Client
         {
             Send_Mail sendForm = new Send_Mail();
             sendForm.Show();
+        }
+
+        private void index_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            login form_login = new login();
+            form_login.Show();
         }
     }
 }

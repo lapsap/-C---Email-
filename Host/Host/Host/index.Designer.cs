@@ -30,6 +30,7 @@
         {
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_addUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -52,17 +53,27 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btn_addUser
+            // 
+            this.btn_addUser.Location = new System.Drawing.Point(12, 313);
+            this.btn_addUser.Name = "btn_addUser";
+            this.btn_addUser.Size = new System.Drawing.Size(75, 23);
+            this.btn_addUser.TabIndex = 2;
+            this.btn_addUser.Text = "Add User";
+            this.btn_addUser.UseVisualStyleBackColor = true;
+            this.btn_addUser.Click += new System.EventHandler(this.btn_addUser_Click);
+            // 
             // index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 348);
+            this.Controls.Add(this.btn_addUser);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
             this.Name = "index";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.index_FormClosed);
-            this.Load += new System.EventHandler(this.index_Load);
             this.ResumeLayout(false);
 
         }
@@ -71,6 +82,7 @@
 
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_addUser;
     }
 }
 

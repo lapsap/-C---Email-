@@ -7,3 +7,6 @@ C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.exe
 C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.pdb
 C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.Send_Mail.resources
 C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.index.resources
+C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.login.resources
+C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\bin\Debug\MySql.Data.DLL
