@@ -10,3 +10,4 @@ C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.ind
 C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
 C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.login.resources
 C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\bin\Debug\MySql.Data.DLL
+C:\Users\xChris\Documents\GitHub\Email\Client\Client\Client\obj\Debug\Client.Main.resources
